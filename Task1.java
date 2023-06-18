@@ -22,10 +22,10 @@ public class Task1 {
             sum += s;
         };
         System.out.println("Ср. арифм. списка:" + (sum/al.size()));
-        for (int a : al){
-            if (a % 2 == 0){
-                al.remove(a);
-            }
+        int i = 0;
+        while (i < al.size()){
+            if (al.get(i) % 2 == 0) al.remove(i);
+            else i++;
         }
         System.out.println("Список без четных чисел: " + al);
 
